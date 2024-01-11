@@ -3,6 +3,8 @@
 
 /* VARIABLES */
 :root {
+  --header-height: 3.5rem;
+
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(28, 88%, 62%);
@@ -55,4 +57,40 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+}
+
+/* HEADER & NAV*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--first-color);
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  transition: color 0.4s;
+}
+
+.nav__logo:hover {
+  color: var(--first-color-alt);
+}
+
+.nav__toggle,
+.nav__close {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
 }
