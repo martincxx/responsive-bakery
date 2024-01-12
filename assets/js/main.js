@@ -26,3 +26,24 @@ const linkAction = () => {
 };
 
 navLink.forEach((navItem) => navItem.addEventListener("click", linkAction));
+
+/* Change header background*/
+
+const scrollHeader = () => {
+  const header = document.getElementById("header");
+  //when the scroll is greater than 50 vh, add the scroll-header class to the header
+  this.scrollY >= 50
+    ? header.classList.add("scroll-header")
+    : header.classList.remove("scroll-header");
+};
+window.addEventListener("scroll", scrollHeader);
+
+/* add blur to header */
+const blurHeader = () => {
+  const header = document.getElementById("header");
+  //when the scroll is greater than 50 vh, add the blur-header class to the header
+  this.scrollY >= 50
+    ? header.classList.add("blur-header")
+    : header.classList.remove("blur-header");
+};
+window.addEventListener("scroll", blurHeader);
