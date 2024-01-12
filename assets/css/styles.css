@@ -234,6 +234,12 @@ img {
   left: 0;
   z-index: -1;
 }
+
+/* ACTIVE LINK */
+.active-link {
+  color: var(--first-color);
+}
+
 /*HOME */
 .home {
   position: relative;
